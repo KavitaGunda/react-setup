@@ -1,0 +1,22 @@
+1. Setup a basic React app with Typescript and Webpack 5
+2. Configure webpack and typescript to allow rendering of images and SVGs 
+3. Setup webpack config for multiple environment like dev and prod 
+4. Add react refresh 
+5.  Linting with ESLint
+6. Code formatting with Prettier
+7. Husky
+8. Next Steps 
+
+###############################
+
+git init 
+
+touch .gitignore 
+  build
+  node_modules 
+
+create ./src folder and create index.html with 
+<div id="root"></div>
+element in body 
+
+

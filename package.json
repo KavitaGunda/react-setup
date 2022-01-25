@@ -1,0 +1,12 @@
+{
+  "name": "react-setup",
+  "version": "1.0.0",
+  "description": "Basic React setup with Typescript, webpack, babel and prettier and ESLint",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kavita Gunda",
+  "license": "MIT"
+}

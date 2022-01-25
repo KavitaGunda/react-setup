@@ -20,3 +20,41 @@ create ./src folder and create index.html with
 element in body 
 
 
+yarn add react react-dom
+
+yarn add -D typescript @types/react @types/react-dom
+
+In root of project create tsconfig.json
+
+Create App.tsx which will contain the root component
+
+Create index.tsx file which will render the App component to the dom 
+
+yarn add -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript
+
+
+add babel configuration file in the root of the file .babelrc
+
+within the babel we are going to list down the presets babel to use 
+
+yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin
+
+Apart from these we also need babel-loader which will allow us to transpile javascript file using babel and webpack 
+
+yarn add -D babel-loader
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

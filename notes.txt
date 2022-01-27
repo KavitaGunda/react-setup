@@ -109,12 +109,29 @@ eslint-plugin-prettier = runs prettier as eslint rule
 
 then add prettierrc.js file to the root of the project 
 
-To ensure all the code committed to git is free from  formating and linting erros we can use packages called lint-staged and Husky
+To ensure all the code committed to git is free from  formating and linting errors we can use packages called lint-staged and Husky
 
 yarn add -D husky@4 lint-staged
 
 and define lint-staged configuration in package.json file
 
+Nice to have but no necessary:
+yarn add -D @babel/runtime @babel/plugin-transform-runtime
+
+and update the babelrc file to incorporate the plugins
+
+to copy static assets into your build folder:
+yarn add -D copy-webpack-plugin
+
+and update the webpack plugin configuration for it
+
+Bundle analyzer package (add it to webpack prod config):
+yarn add -D webpack-bundle-analyzer
+
+and run the command "yarn build"
 
 
+and finally you can improve the performance with webpack using code splitting
 
+
+degit

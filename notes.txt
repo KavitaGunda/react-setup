@@ -43,17 +43,77 @@ Apart from these we also need babel-loader which will allow us to transpile java
 
 yarn add -D babel-loader
 
+In the root folder create webpack folder and create webpack.config.js file 
+
+yarn add -D css-loader style-loader
+
+Add a file called react.png to src folder
+
+In the src folder create a file declaration.d.ts 
+
+and add below two lines in it:
+
+declare module '*.png'
+declare module '*.svg'
+
+For production we need different webpack setups 
+
+rename the webpack.config.js to webpack.common.js which will be used by both dev and prod env  and remove the mode property
+
+and now create webpack.dev.js webpack.prod.js configuration file for webpack in the webpack folder
+
+and then create webpack.config.js file to merge these file as per the environment 
+
+yarn add -D webpack-merge 
+
+now after writing the merge code in webpack.config.js, now write the scripts in package.json file for these to work 
+
+to run the prod run the command 
+yarn build 
+
+and to run build get into folder ./build  and run 
+build>npx serve 
+
+and go to the port mentioned 
+
+react-refresh / hot module replacement:
+---------------------------------------
+yarn add -D @pmmmwh/react-refresh-webpack-plugin react-refresh
+
+https://github.com/pmmmwh/react-refresh-webpack-plugin
+
+Now modify the webpack config
 
 
+ESLint setup:
+----------------------
+yarn add -D eslint
+
+yarn add -D eslint-plugin-react eslint-plugin-react-hooks 
+
+yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
+
+yarn add -D eslint-plugin-import eslint-plugin-jsx-a11y
 
 
+install Vscode prettier extension and make sure formatOnSave is selected true in your vscode settings
 
 
+yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
 
 
+prettier = core prettier library 
+eslint-config-prettier = disables eslint rules for that might conflict for prettier formatting
+eslint-plugin-prettier = runs prettier as eslint rule 
 
 
+then add prettierrc.js file to the root of the project 
 
+To ensure all the code committed to git is free from  formating and linting erros we can use packages called lint-staged and Husky
+
+yarn add -D husky@4 lint-staged
+
+and define lint-staged configuration in package.json file
 
 
 
